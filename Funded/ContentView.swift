@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    var grants = AvailableGrants()
+    
+    //Grants are stored here
+    var allGrants = AvailableGrants()
     
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ForEach(grants.grants, id: \.self) { grant in
+                    ForEach(allGrants.grants, id: \.self) { grant in
                         CardView(grant: grant)
                             .padding(.bottom, 10)
                     }
                 }
             }
             .navigationTitle("Funded")
-            .toolbar(content: {Image(systemName: "star")})
+            .toolbar(content: {Image(systemName: "star.fill")})
         }
     }
 }

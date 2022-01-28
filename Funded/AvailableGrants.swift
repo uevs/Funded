@@ -11,8 +11,10 @@ import SwiftUI
 class AvailableGrants: ObservableObject {
     @Published var grants: Array<Grant>
     
+    // Our palette
     var colors = [Color("MadOrange"), Color("MadGreen"), Color("MadPurple"),Color("MadPink"),Color("MadYellow")]
     
+    // Just some random test data. This should eventually come programmaticaly from json files
     
     var grant1 = Grant(name:"MaddaGrant 2022", amount: 20000, categories: ["War", "Love", "Colors", "Photoraphy"], restrictions: ["Italy","Women"])
     var grant2 = Grant(name:"Beni Culturali 2022", amount: 100, categories: ["Reinassance", "History", "Paintings"], restrictions: ["Italy"])
@@ -29,6 +31,8 @@ class AvailableGrants: ObservableObject {
     }
     
     func colorize() {
+        
+        //This function adds a specific colors to each grant, in order.
         var counter = 0
         
         for var grant in grants {
