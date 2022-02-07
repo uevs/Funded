@@ -22,12 +22,16 @@ struct ContentView: View {
         }
     }
     
+    @State private var colorFilter: Color = Color("MadOrange")
+    // Implement a specific color into the Struct
     
-    
-    //private var filterResults: [Grant] {
-        let filterResults = allGrants.grants
-       // if
-    //}
+//    private var filterResults: [Grant] {
+//        let filterResults = allGrants.grants
+//        if colorFilter.description.isEmpty { return filterResults }
+//        return filterResults.filter {
+//            $0.
+//        }
+//    }
     
     
     var body: some View {
