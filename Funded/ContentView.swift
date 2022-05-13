@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //Grants are stored here
+    /// Grants are stored here
     var allGrants = AvailableGrants()
     
     

@@ -12,15 +12,13 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            // The base shape of the card
+            /// The base shape of the card
             RoundedRectangle(cornerRadius: 35)
                 .foregroundColor(grant.color)
                 .padding(.horizontal, 15)
             
-            //This stack contains all the card elements
+            /// This stack contains all the card elements
             VStack(alignment: .leading) {
-                
-                // This group contains the text
                 Group {
                     Text(grant.name)
                         .font(.title).bold()
@@ -35,10 +33,10 @@ struct CardView: View {
                     Text("Restrictions: \(grant.restrictions.formatted())")
                 }
                 
-                //This stack contains the favorite button and the counter
+                /// This stack contains the favorite button and the counter
                 HStack {
                     Button {
-                        // favorite action
+                        /// Favorite action
                     } label: {
                         Circle()
                             .frame(width: 40, height: 40, alignment: .leading)
@@ -48,7 +46,7 @@ struct CardView: View {
                     
                     Spacer()
                     
-                    //this needs to be implemented
+                    /// This needs to be implemented
                     Text("13 Days left!")
                         .font(.headline)
                     

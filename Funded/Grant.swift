@@ -11,7 +11,7 @@ import SwiftUI
 
 struct Grant: Identifiable, Hashable {
     
-    // Each grant is an instance of this struct. Amount should become a currency.
+    /// Each grant is an instance of this struct. Amount should become a currency.
     
     var id = UUID()
     var name: String = "Grant Name"
